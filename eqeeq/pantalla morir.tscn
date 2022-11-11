@@ -1,0 +1,19 @@
+[gd_scene format=2]
+
+[node name="pantalla morir" type="Node2D"]
+
+[node name="TextEdit" type="TextEdit" parent="."]
+margin_right = 633.0
+margin_bottom = 348.0
+
+[node name="reiniciar" type="Button" parent="."]
+margin_left = 115.0
+margin_top = 221.0
+margin_right = 189.0
+margin_bottom = 264.0
+
+[node name="salir" type="Button" parent="."]
+margin_left = 415.0
+margin_top = 219.0
+margin_right = 491.0
+margin_bottom = 262.0

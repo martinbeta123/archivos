@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://NPC.tscn" type="PackedScene" id=2]
+[ext_resource path="res://score.gd" type="Script" id=3]
+[ext_resource path="res://xBackground.gd" type="Script" id=4]
+[ext_resource path="res://istockphoto-1333010525-612x612.jpg" type="Texture" id=5]
+
+[node name="Screen" type="Node2D"]
+
+[node name="NPC" parent="." instance=ExtResource( 2 )]
+position = Vector2( 617, 225 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 246, 206 )
+
+[node name="score" type="RichTextLabel" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 3 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource( 4 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1600, 0 )
+
+[node name="Istockphoto-1333010525-612X612" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 514.5, 186 )
+scale = Vector2( 1.66503, 1 )
+texture = ExtResource( 5 )
